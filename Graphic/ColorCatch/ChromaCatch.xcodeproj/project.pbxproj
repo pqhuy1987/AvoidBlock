@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3660D9BF1C83359F00FEE04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660D9BE1C83359F00FEE04D /* AppDelegate.swift */; };
+		3660D9D81C83359F00FEE04D /* ChromaCatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660D9D71C83359F00FEE04D /* ChromaCatchTests.swift */; };
+		3660D9E31C83359F00FEE04D /* ChromaCatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660D9E21C83359F00FEE04D /* ChromaCatchUITests.swift */; };
+		3660D9F91C8336CC00FEE04D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3660D9F71C8336CC00FEE04D /* GameScene.sks */; };
+		3660D9FA1C8336CC00FEE04D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660D9F81C8336CC00FEE04D /* GameScene.swift */; };
+		3660D9FC1C8336E500FEE04D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660D9FB1C8336E500FEE04D /* GameViewController.swift */; };
+		3660D9FF1C83372B00FEE04D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3660D9FE1C83372B00FEE04D /* Assets.xcassets */; };
+		3660DA021C83374E00FEE04D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3660DA001C83374E00FEE04D /* LaunchScreen.storyboard */; };
+		3660DA031C83374E00FEE04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3660DA011C83374E00FEE04D /* Main.storyboard */; };
+		3660DA051C83377B00FEE04D /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660DA041C83377B00FEE04D /* ColorProvider.swift */; };
+		3660DA0B1C83500B00FEE04D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660DA0A1C83500B00FEE04D /* Globals.swift */; };
+		3660DA101C83641400FEE04D /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3660DA0F1C83641400FEE04D /* TitleScene.swift */; };
+		3660DA121C83643F00FEE04D /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3660DA111C83643F00FEE04D /* TitleScene.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3660D9D41C83359F00FEE04D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3660D9B31C83359F00FEE04D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3660D9BA1C83359F00FEE04D;
+			remoteInfo = ChromaCatch;
+		};
+		3660D9DF1C83359F00FEE04D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3660D9B31C83359F00FEE04D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3660D9BA1C83359F00FEE04D;
+			remoteInfo = ChromaCatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3660D9BB1C83359F00FEE04D /* ChromaCatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromaCatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3660D9BE1C83359F00FEE04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3660D9CE1C83359F00FEE04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3660D9D31C83359F00FEE04D /* ChromaCatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaCatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3660D9D71C83359F00FEE04D /* ChromaCatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaCatchTests.swift; sourceTree = "<group>"; };
+		3660D9D91C83359F00FEE04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3660D9DE1C83359F00FEE04D /* ChromaCatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaCatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3660D9E21C83359F00FEE04D /* ChromaCatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaCatchUITests.swift; sourceTree = "<group>"; };
+		3660D9E41C83359F00FEE04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3660D9F71C8336CC00FEE04D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3660D9F81C8336CC00FEE04D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3660D9FB1C8336E500FEE04D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3660D9FE1C83372B00FEE04D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3660DA001C83374E00FEE04D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3660DA011C83374E00FEE04D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3660DA041C83377B00FEE04D /* ColorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
+		3660DA0A1C83500B00FEE04D /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		3660DA0F1C83641400FEE04D /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		3660DA111C83643F00FEE04D /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3660D9B81C83359F00FEE04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9D01C83359F00FEE04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9DB1C83359F00FEE04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3660D9B21C83359F00FEE04D = {
+			isa = PBXGroup;
+			children = (
+				3660D9BD1C83359F00FEE04D /* ChromaCatch */,
+				3660D9D61C83359F00FEE04D /* ChromaCatchTests */,
+				3660D9E11C83359F00FEE04D /* ChromaCatchUITests */,
+				3660D9BC1C83359F00FEE04D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3660D9BC1C83359F00FEE04D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9BB1C83359F00FEE04D /* ChromaCatch.app */,
+				3660D9D31C83359F00FEE04D /* ChromaCatchTests.xctest */,
+				3660D9DE1C83359F00FEE04D /* ChromaCatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3660D9BD1C83359F00FEE04D /* ChromaCatch */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9BE1C83359F00FEE04D /* AppDelegate.swift */,
+				3660D9F61C8336B400FEE04D /* Controllers */,
+				3660DA061C834F5D00FEE04D /* Extensions */,
+				3660D9CE1C83359F00FEE04D /* Info.plist */,
+				3660D9F01C8336A200FEE04D /* Providers */,
+				3660D9F11C8336A200FEE04D /* Resources */,
+				3660D9F31C8336A200FEE04D /* SpriteKit */,
+				3660D9FD1C83371600FEE04D /* Storyboards */,
+				3660DA091C83500000FEE04D /* Utilities */,
+			);
+			path = ChromaCatch;
+			sourceTree = "<group>";
+		};
+		3660D9D61C83359F00FEE04D /* ChromaCatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9D71C83359F00FEE04D /* ChromaCatchTests.swift */,
+				3660D9D91C83359F00FEE04D /* Info.plist */,
+			);
+			path = ChromaCatchTests;
+			sourceTree = "<group>";
+		};
+		3660D9E11C83359F00FEE04D /* ChromaCatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9E21C83359F00FEE04D /* ChromaCatchUITests.swift */,
+				3660D9E41C83359F00FEE04D /* Info.plist */,
+			);
+			path = ChromaCatchUITests;
+			sourceTree = "<group>";
+		};
+		3660D9F01C8336A200FEE04D /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3660DA041C83377B00FEE04D /* ColorProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		3660D9F11C8336A200FEE04D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9FE1C83372B00FEE04D /* Assets.xcassets */,
+				3660D9F21C8336A200FEE04D /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3660D9F21C8336A200FEE04D /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		3660D9F31C8336A200FEE04D /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9F41C8336A200FEE04D /* Nodes */,
+				3660D9F51C8336A200FEE04D /* Scenes */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		3660D9F41C8336A200FEE04D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		3660D9F51C8336A200FEE04D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9F71C8336CC00FEE04D /* GameScene.sks */,
+				3660D9F81C8336CC00FEE04D /* GameScene.swift */,
+				3660DA0F1C83641400FEE04D /* TitleScene.swift */,
+				3660DA111C83643F00FEE04D /* TitleScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3660D9F61C8336B400FEE04D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3660D9FB1C8336E500FEE04D /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3660D9FD1C83371600FEE04D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3660DA001C83374E00FEE04D /* LaunchScreen.storyboard */,
+				3660DA011C83374E00FEE04D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3660DA061C834F5D00FEE04D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3660DA091C83500000FEE04D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3660DA0A1C83500B00FEE04D /* Globals.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3660D9BA1C83359F00FEE04D /* ChromaCatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3660D9E71C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatch" */;
+			buildPhases = (
+				3660D9B71C83359F00FEE04D /* Sources */,
+				3660D9B81C83359F00FEE04D /* Frameworks */,
+				3660D9B91C83359F00FEE04D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChromaCatch;
+			productName = ChromaCatch;
+			productReference = 3660D9BB1C83359F00FEE04D /* ChromaCatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3660D9D21C83359F00FEE04D /* ChromaCatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3660D9EA1C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatchTests" */;
+			buildPhases = (
+				3660D9CF1C83359F00FEE04D /* Sources */,
+				3660D9D01C83359F00FEE04D /* Frameworks */,
+				3660D9D11C83359F00FEE04D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3660D9D51C83359F00FEE04D /* PBXTargetDependency */,
+			);
+			name = ChromaCatchTests;
+			productName = ChromaCatchTests;
+			productReference = 3660D9D31C83359F00FEE04D /* ChromaCatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3660D9DD1C83359F00FEE04D /* ChromaCatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3660D9ED1C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatchUITests" */;
+			buildPhases = (
+				3660D9DA1C83359F00FEE04D /* Sources */,
+				3660D9DB1C83359F00FEE04D /* Frameworks */,
+				3660D9DC1C83359F00FEE04D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3660D9E01C83359F00FEE04D /* PBXTargetDependency */,
+			);
+			name = ChromaCatchUITests;
+			productName = ChromaCatchUITests;
+			productReference = 3660D9DE1C83359F00FEE04D /* ChromaCatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3660D9B31C83359F00FEE04D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Eric Internicola";
+				TargetAttributes = {
+					3660D9BA1C83359F00FEE04D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					3660D9D21C83359F00FEE04D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 3660D9BA1C83359F00FEE04D;
+					};
+					3660D9DD1C83359F00FEE04D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 3660D9BA1C83359F00FEE04D;
+					};
+				};
+			};
+			buildConfigurationList = 3660D9B61C83359F00FEE04D /* Build configuration list for PBXProject "ChromaCatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3660D9B21C83359F00FEE04D;
+			productRefGroup = 3660D9BC1C83359F00FEE04D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3660D9BA1C83359F00FEE04D /* ChromaCatch */,
+				3660D9D21C83359F00FEE04D /* ChromaCatchTests */,
+				3660D9DD1C83359F00FEE04D /* ChromaCatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3660D9B91C83359F00FEE04D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3660DA021C83374E00FEE04D /* LaunchScreen.storyboard in Resources */,
+				3660D9F91C8336CC00FEE04D /* GameScene.sks in Resources */,
+				3660D9FF1C83372B00FEE04D /* Assets.xcassets in Resources */,
+				3660DA121C83643F00FEE04D /* TitleScene.sks in Resources */,
+				3660DA031C83374E00FEE04D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9D11C83359F00FEE04D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9DC1C83359F00FEE04D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3660D9B71C83359F00FEE04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3660DA051C83377B00FEE04D /* ColorProvider.swift in Sources */,
+				3660DA0B1C83500B00FEE04D /* Globals.swift in Sources */,
+				3660D9FA1C8336CC00FEE04D /* GameScene.swift in Sources */,
+				3660D9FC1C8336E500FEE04D /* GameViewController.swift in Sources */,
+				3660D9BF1C83359F00FEE04D /* AppDelegate.swift in Sources */,
+				3660DA101C83641400FEE04D /* TitleScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9CF1C83359F00FEE04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3660D9D81C83359F00FEE04D /* ChromaCatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3660D9DA1C83359F00FEE04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3660D9E31C83359F00FEE04D /* ChromaCatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3660D9D51C83359F00FEE04D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3660D9BA1C83359F00FEE04D /* ChromaCatch */;
+			targetProxy = 3660D9D41C83359F00FEE04D /* PBXContainerItemProxy */;
+		};
+		3660D9E01C83359F00FEE04D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3660D9BA1C83359F00FEE04D /* ChromaCatch */;
+			targetProxy = 3660D9DF1C83359F00FEE04D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3660D9E51C83359F00FEE04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3660D9E61C83359F00FEE04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3660D9E81C83359F00FEE04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChromaCatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3660D9E91C83359F00FEE04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChromaCatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3660D9EB1C83359F00FEE04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = ChromaCatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChromaCatch.app/ChromaCatch";
+			};
+			name = Debug;
+		};
+		3660D9EC1C83359F00FEE04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChromaCatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChromaCatch.app/ChromaCatch";
+			};
+			name = Release;
+		};
+		3660D9EE1C83359F00FEE04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = ChromaCatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChromaCatch;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3660D9EF1C83359F00FEE04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChromaCatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colasoft.ChromaCatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChromaCatch;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3660D9B61C83359F00FEE04D /* Build configuration list for PBXProject "ChromaCatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3660D9E51C83359F00FEE04D /* Debug */,
+				3660D9E61C83359F00FEE04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3660D9E71C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3660D9E81C83359F00FEE04D /* Debug */,
+				3660D9E91C83359F00FEE04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3660D9EA1C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3660D9EB1C83359F00FEE04D /* Debug */,
+				3660D9EC1C83359F00FEE04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3660D9ED1C83359F00FEE04D /* Build configuration list for PBXNativeTarget "ChromaCatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3660D9EE1C83359F00FEE04D /* Debug */,
+				3660D9EF1C83359F00FEE04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3660D9B31C83359F00FEE04D /* Project object */;
+}
