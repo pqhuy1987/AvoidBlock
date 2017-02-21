@@ -12,7 +12,7 @@ class TitleScene: SKScene {
     var btnPlay: UIButton?
     var gameTitle: UILabel?
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         backgroundColor = ColorProvider.themeColor
         setupText()
     }
@@ -27,9 +27,9 @@ extension TitleScene {
             
             if let gameScene = GameScene(fileNamed: "GameScene") {
                 view.ignoresSiblingOrder = true
-                gameScene.scaleMode = .ResizeFill
+                gameScene.scaleMode = .resizeFill
                 
-                view.presentScene(gameScene, transition: SKTransition.crossFadeWithDuration(1))
+                view.presentScene(gameScene, transition: SKTransition.crossFade(withDuration: 1))
             }
         }
     }
@@ -44,9 +44,9 @@ extension TitleScene {
             if let btnPlay = btnPlay {
                 btnPlay.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height / 2)
                 btnPlay.titleLabel!.font = UIFont(name: "Futura", size: 150)
-                btnPlay.setTitle("Play!", forState: .Normal)
-                btnPlay.setTitleColor(ColorProvider.offBlackColor, forState: .Normal)
-                btnPlay.addTarget(self, action: Selector("playTheGame"), forControlEvents: .TouchUpInside)
+                btnPlay.setTitle("Play!", for: UIControlState())
+                btnPlay.setTitleColor(ColorProvider.offBlackColor, for: UIControlState())
+                btnPlay.addTarget(self, action: #selector(TitleScene.playTheGame), for: .touchUpInside)
                 view.addSubview(btnPlay)
             }
             
@@ -54,7 +54,7 @@ extension TitleScene {
             if let gameTitle = gameTitle {
                 gameTitle.textColor = ColorProvider.offWhiteColor
                 gameTitle.font = UIFont(name: "Futura", size: 40)
-                gameTitle.textAlignment = .Center
+                gameTitle.textAlignment = .center
                 gameTitle.text = "AVOID SPIKES!"
                 view.addSubview(gameTitle)
             }

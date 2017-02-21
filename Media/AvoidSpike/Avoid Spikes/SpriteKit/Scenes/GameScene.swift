@@ -23,7 +23,7 @@ class GameScene: SKScene {
     var location: CGPoint?
     var spikeTimeSpawnNumber = 0.3
 
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         backgroundColor = ColorProvider.themeColor
         physicsWorld.contactDelegate = self
 
@@ -38,18 +38,18 @@ class GameScene: SKScene {
         updateScoreTimer()
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            location = touch.locationInNode(self)
-            if let player = player, location = location where isAlive {
+            location = touch.location(in: self)
+            if let player = player, let location = location, isAlive {
                 player.position.x = location.x
-            } else if let player = player where !isAlive {
+            } else if let player = player, !isAlive {
                 player.position.x = -200
             }
         }
     }
    
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
 
     }
 }
@@ -60,11 +60,11 @@ extension GameScene {
     func spawnPlayer() {
         player = SKSpriteNode(color: ColorProvider.offWhiteColor, size: CGSize(width: 50, height: 90))
         if let player = player {
-            player.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMinY(frame) + 100)
-            player.physicsBody = SKPhysicsBody(rectangleOfSize: player.size)
+            player.position = CGPoint(x: frame.midX, y: frame.minY + 100)
+            player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
             player.physicsBody?.affectedByGravity = false
             player.physicsBody?.allowsRotation = false
-            player.physicsBody?.dynamic = false
+            player.physicsBody?.isDynamic = false
             player.physicsBody?.categoryBitMask = PhysicsCategory.player
             player.physicsBody?.contactTestBitMask = PhysicsCategory.spike
 
@@ -77,24 +77,24 @@ extension GameScene {
         
         if let spike = spike {
             spike.color = ColorProvider.offBlackColor
-            spike.position.x = random() * CGRectGetMaxX(frame)
-            spike.position.y = CGRectGetMaxY(frame) + spike.size.height
-            spike.physicsBody = SKPhysicsBody(rectangleOfSize: spike.size)
+            spike.position.x = random() * frame.maxX
+            spike.position.y = frame.maxY + spike.size.height
+            spike.physicsBody = SKPhysicsBody(rectangleOf: spike.size)
             spike.physicsBody?.affectedByGravity = false
             spike.physicsBody?.allowsRotation = false
-            spike.physicsBody?.dynamic = true
+            spike.physicsBody?.isDynamic = true
             spike.physicsBody?.categoryBitMask = PhysicsCategory.spike
             spike.physicsBody?.collisionBitMask = PhysicsCategory.player
 
-            spike.runAction(SKAction.moveToY(-200, duration: spikeSpeed))
+            spike.run(SKAction.moveTo(y: -200, duration: spikeSpeed))
             addChild(spike)
         }
     }
 
     func spawnGround() {
-        ground = SKSpriteNode(color: ColorProvider.offBlackColor, size: CGSize(width: CGRectGetWidth(frame), height: 150))
+        ground = SKSpriteNode(color: ColorProvider.offBlackColor, size: CGSize(width: frame.width, height: 150))
         if let ground = ground {
-            ground.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMinY(frame))
+            ground.position = CGPoint(x: frame.midX, y: frame.minY)
             addChild(ground)
         }
     }
@@ -104,7 +104,7 @@ extension GameScene {
         if let lblMain = lblMain {
             lblMain.fontSize = 100
             lblMain.fontColor = ColorProvider.offWhiteColor
-            lblMain.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame)+150)
+            lblMain.position = CGPoint(x: frame.midX, y: frame.midY+150)
             lblMain.text = "Start!"
 
             addChild(lblMain)
@@ -116,7 +116,7 @@ extension GameScene {
         if let lblScore = lblScore {
             lblScore.fontSize = 50
             lblScore.fontColor = ColorProvider.offWhiteColor
-            lblScore.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMinY(frame)+25)
+            lblScore.position = CGPoint(x: frame.midX, y: frame.minY+25)
             lblScore.text = "Start!"
 
             addChild(lblScore)
@@ -127,39 +127,39 @@ extension GameScene {
 // MARK: - Spawn Timer Functions
 extension GameScene {
     func spawnSpikeTimer() {
-        let spikeTimer = SKAction.waitForDuration(spikeTimeSpawnNumber)
-        let spawn = SKAction.runBlock {
+        let spikeTimer = SKAction.wait(forDuration: spikeTimeSpawnNumber)
+        let spawn = SKAction.run {
             if self.isAlive {
                 self.spawnSpike()
             }
         }
-        runAction(SKAction.repeatActionForever(SKAction.sequence([spikeTimer, spawn])))
+        run(SKAction.repeatForever(SKAction.sequence([spikeTimer, spawn])))
     }
 
     func hideLabel() {
-        let wait = SKAction.waitForDuration(3)
-        let hideLabel = SKAction.runBlock {
+        let wait = SKAction.wait(forDuration: 3)
+        let hideLabel = SKAction.run {
             self.lblMain?.alpha = 0
         }
-        runAction(SKAction.sequence([wait, hideLabel]))
+        run(SKAction.sequence([wait, hideLabel]))
     }
 
     func updateScoreTimer() {
-        let wait = SKAction.waitForDuration(1)
-        let scoreAction = SKAction.runBlock {
+        let wait = SKAction.wait(forDuration: 1)
+        let scoreAction = SKAction.run {
             if self.isAlive {
                 self.score += 1
                 self.updateScore()
             }
         }
-        runAction(SKAction.repeatActionForever(SKAction.sequence([wait, scoreAction])))
+        run(SKAction.repeatForever(SKAction.sequence([wait, scoreAction])))
     }
 }
 
 
 // MARK: - Physics Delegate
 extension GameScene : SKPhysicsContactDelegate {
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         let firstBody = contact.bodyA
         let secondBody = contact.bodyB
 
@@ -170,8 +170,8 @@ extension GameScene : SKPhysicsContactDelegate {
         }
     }
 
-    func spikeCollision(playerTemp: SKSpriteNode?, spikeTemp: SKTriangle?) {
-        if let playerTemp = playerTemp, _ = spikeTemp {
+    func spikeCollision(_ playerTemp: SKSpriteNode?, spikeTemp: SKTriangle?) {
+        if let playerTemp = playerTemp, let _ = spikeTemp {
             playerTemp.removeFromParent()
             isAlive = false
             showGameOver()
@@ -205,12 +205,12 @@ extension GameScene {
     }
     
     func waitThenMoveToTitleScene() {
-        let wait = SKAction.waitForDuration(1)
-        let transition = SKAction.runBlock {
-            if let titleScene = TitleScene(fileNamed: "TitleScene"), view = self.view {
-                view.presentScene(titleScene, transition: SKTransition.crossFadeWithDuration(1))
+        let wait = SKAction.wait(forDuration: 1)
+        let transition = SKAction.run {
+            if let titleScene = TitleScene(fileNamed: "TitleScene"), let view = self.view {
+                view.presentScene(titleScene, transition: SKTransition.crossFade(withDuration: 1))
             }
         }
-        runAction(SKAction.sequence([wait, transition]))
+        run(SKAction.sequence([wait, transition]))
     }
 }

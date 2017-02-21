@@ -10,14 +10,14 @@ import SpriteKit
 
 class SKTriangle: SKShapeNode {
     var size = CGSize(width: 0, height: 0)
-    var color: UIColor = UIColor.whiteColor() {
+    var color: UIColor = UIColor.white {
         didSet {
             fillColor = color
             strokeColor = color
         }
     }
     
-    class func createTriangleOfSize(width: CGFloat, height: CGFloat) -> SKTriangle {
+    class func createTriangleOfSize(_ width: CGFloat, height: CGFloat) -> SKTriangle {
         let triangle = SKTriangle(path: SKTriangle.buildTriangleShape(width, height: height))
         triangle.size = CGSize(width: width, height: height)
         return triangle
@@ -27,13 +27,13 @@ class SKTriangle: SKShapeNode {
 
 // MARK: - Helper Methods
 extension SKTriangle {
-    class func buildTriangleShape(width: CGFloat, height: CGFloat) -> CGPath {
+    class func buildTriangleShape(_ width: CGFloat, height: CGFloat) -> CGPath {
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: 0, y: height))
-        path.addLineToPoint(CGPoint(x: width, y: height))
-        path.addLineToPoint(CGPoint(x: width/2, y: 0))
-        path.addLineToPoint(CGPoint(x: 0, y: height))
-        path.closePath()
-        return path.CGPath
+        path.move(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x: width, y: height))
+        path.addLine(to: CGPoint(x: width/2, y: 0))
+        path.addLine(to: CGPoint(x: 0, y: height))
+        path.close()
+        return path.cgPath
     }
 }
