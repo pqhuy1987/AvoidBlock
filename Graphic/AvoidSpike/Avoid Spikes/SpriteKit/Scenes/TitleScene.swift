@@ -55,7 +55,7 @@ extension TitleScene {
                 gameTitle.textColor = ColorProvider.offWhiteColor
                 gameTitle.font = UIFont(name: "Futura", size: 40)
                 gameTitle.textAlignment = .Center
-                gameTitle.text = "AVOID SPIKES!"
+                gameTitle.text = "DANGER SPIKES!"
                 view.addSubview(gameTitle)
             }
         }

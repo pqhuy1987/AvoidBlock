@@ -254,7 +254,7 @@
 				TargetAttributes = {
 					938498641C7EB34800F6BBFC = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 268S5GJFWZ;
+						DevelopmentTeam = FSP2U7T379;
 					};
 					9384987C1C7EB34800F6BBFC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -471,8 +471,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Avoid Spikes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icolasoft.Avoid-Spikes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digital.spike.100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -485,8 +486,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Avoid Spikes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icolasoft.Avoid-Spikes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digital.spike.100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
